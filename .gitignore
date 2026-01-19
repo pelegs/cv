@@ -1,0 +1,23 @@
+# My specific stuff
+secrets.tex
+*.png
+*.xmpi
+
+# Core latex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.bcf
+*.run*
+
+# outputs (since they contain 'secrets')
+*.pdf

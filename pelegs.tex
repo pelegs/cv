@@ -1,0 +1,251 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7.4, 30 Jul 2025) written by LianTze Lim (liantze@gmail.com), based on the
+% CV created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,withhypeper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1cm, columnsep=1.75cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{xblue}{HTML}{4268BD}
+\definecolor{xpurple}{HTML}{7F52B2}
+\colorlet{accent}{xblue!90}
+% \colorlet{name}{black}
+\colorlet{tagline}{accent}
+\colorlet{heading}{accent}
+\colorlet{headingrule}{accent}
+% \colorlet{subheading}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.cfg}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num.cfg}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+%% Defines the multilanguage (EN/DE) command
+\input{multilang}
+
+%% Contains secrets such as phone number
+%% i.e. stuff that shouldn't be on a public git repo
+%% hence they are loaded from a 'secrets' file that is in the .gitignore
+\input{secrets}
+
+\begin{document}
+\name{Peleg Sapir}
+\tagline{\multilang{Software Developer}{Softwareentwickler}}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\photoR{3.35cm}{pelegs1}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+	\email{pelegs@gmail.com}
+	\phone{\myphonenum}
+	\linkedin{pelegsap}
+	\github{pelegs}
+	\location{Darmstadt}
+	\nationality{\multilang{German}{Deutsch}}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+	\vspace{1.5em}
+	\cvsection{\multilang{Experience}{Erfahrung}}
+
+	\cvevent{\multilang{Software Developer}{Softwareentwickler}}{SureSecure GmbH}{February 2025 -- July 2025}{Düsseldorf, Germany}
+	As a member of the Securiry Operation Center (SOC) I was responsible for developing, maintaining and integrating various components and new features into our workflow, with emphasis on our SIEM and SOAR platforms.\\
+	% \textbf{Note}: the specific details are confidential due to the nature of the cybersecurity environment. Further information will be divulged per request only as allowed by the company.
+
+	\divider
+
+	\cvevent{Software Developer, Automation Engineer}{exocad GmbH}{November 2020 -- January 2025}{Darmstadt, Germany}
+	I was tasked with designing and implementing automated processes for different teams in the company.
+
+	Examples of successfull projects (\textbf{tools used}):
+
+	\vspace{0.5em}
+
+	\begin{itemize}
+		\item Designed, implemented and deployed a system for extraction of data from 3D models provided by external manufactures. The data is collected into a database which is updated daily and provides simple search and statistics to internal users via SQL queries. This system is used daily by the company's integration team. (\textbf{Python}, \textbf{Sqlite}, \textbf{Bash})
+		\item Created a conversion tool between two ticketing systems: \textit{trac} and \textit{Jira}. I then used the tool to migrate all of the existing tickets, including comments, change histories and all other attributes. (\textbf{Python with REST API}, \textbf{PostgreSQL})
+		\item Wrote script for anonymization of client-generated case files as part of a pipeline for developing machine-learning models. (\textbf{Python}, \textbf{C\#)}
+		\item Created a pipeline for generating official release notes from relevant Jira tickets. (\textbf{Python}, \textbf{Jenkins})
+	\end{itemize}
+
+	\vspace{0.5em}
+	I also gave seminars in the company on various topics, such as \textit{linear algebra} and \textit{python}.
+
+	\divider
+
+	\cvevent{Software Developer}{MPI for Biophysical Chemistry}{2018 --  2019}{Göttingen, Germany}
+	Developed firmware and software for a locally built automatic worm incubator. Publication: \href{https://www.tandfonline.com/doi/full/10.1080/01677063.2020.1776709}{DOI: 10.1080/01677063.2020.1776709}.
+
+	\divider
+
+	\cvevent{Student Assistant (HiWi)}{ZEDAT, Freie Universität Berlin}{2017}{Berlin, Germany}
+	Was a member of the HPC cluster group. As part of the team I wrote scripts for different management purposes.
+
+	\divider
+
+	\cvevent{Software Developer, Research Assistant}{MPI for Dynamics and Self-Organization, Göttingen}{2014 -- 2016}{Göttingen, Germany}
+	Developed software to track collectives of bacteria from videos.
+
+
+	%\cvsection{A Day of My Life}
+
+	%% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+	%% \wheelchart{outer radius}{inner radius}{
+	%% comma-separated list of value/text width/color/detail}
+	%% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+	%\hspace*{-1em}  %% quick hack to move the wheelchart a bit left
+	%\wheelchart{1.5cm}{0.5cm}{%
+	%	10/13em/accent!30/Sleeping \& dreaming about work,
+	%	25/9em/accent!60/Public resolving issues with Yahoo!\ investors,
+	%	5/11em/accent!10/\footnotesize\\[1ex]New York \& San Francisco Ballet Jawbone board member,
+	%	20/11em/accent!40/Spending time with family,
+	%	5/8em/accent!20/\footnotesize Business development for Yahoo!\ after the Verizon acquisition,
+	%	30/9em/accent/Showing Yahoo!\ \mbox{employees} that their work has meaning,
+	%	5/8em/accent!20/Baking cupcakes
+	%}
+
+	%% use ONLY \newpage if you want to force a page break for
+	%% ONLY the currentc column
+
+	\switchcolumn
+
+	\vspace{1.5em}
+
+	\cvsection{Summary}
+	Software developer with \textbf{over 10 years} of professional experience.
+
+	\cvsection{Main Tools}
+
+	\cvachievement{\faPython}{Python}{Been working with python almost daily for \textbf{over 10 years}, it is my main go-to langauge for fast prototyping and scripting}
+
+	\divider
+
+	\cvachievement{\faLinux}{Linux}{Avid Linux user for \textbf{over 20 years} and fully fluent in any Linux environment}
+
+	\divider
+
+	\cvachievement{\faGit*}{Git}{Many years of experience working with git, including \textbf{GitLab CI/CD} for deployment \& integration}
+
+	\divider
+
+	\cvachievement{\faDocker}{Docker}{Experienced in setting up containers}
+
+	\cvsection{Other Tools}
+
+	% Don't overuse these \cvtag boxes — they're just eye-candies and not essential. If something doesn't fit on a single line, it probably works better as part of an itemized list (probably inlined itemized list), or just as a comma-separated list of strengths.
+
+	\cvtag{Golang}
+	\cvtag{C/C++}\\
+	\cvtag{Bash}
+	\cvtag{SQL}
+	\cvtag{Jenkins}
+	\cvtag{AWS}
+	\cvtag{BitBucket}
+	\cvtag{NeoVim}
+	\cvtag{\LaTeX\tikzmark{ltx}}
+	\begin{tikzpicture}[remember picture, overlay]
+		\fontsize{6}{6}\selectfont{}
+		\draw[stealth-] ($(pic cs:ltx) + (7pt,2.5pt)$) to [out=0, in=180] ++(25pt,-10pt) node [right, text width=1.15cm] {what I used to typeset the cv \faIcon[regular]{smile-beam}};
+	\end{tikzpicture}
+
+	% \divider\smallskip
+
+	\cvsection{Languages}
+	\vspace{0.25em}
+	\begingroup
+	\setlength{\parskip}{-0.5em}
+	\langskill{English}{Fully fluent in speech and writing}
+	\langskill{German}{Fluent in daily conversations}
+	\langskill{Hebrew}{Native speaker}
+	\endgroup
+
+	\cvsection{Academia}
+	\begingroup
+	\setlength{\parskip}{-0.2em}
+
+	\cvGradInfo{M.Sc. Chemistry}{Freie Universität Berlin}{2019}{Berlin/Göttingen}
+
+	\divider
+
+	\cvGradInfo{B.Sc. Chemistry}{Tel Aviv university}{2012}{Tel Aviv-Jaffa}
+
+	\divider
+
+	\cvTeachInfo{Lecturer: Physics Simulations}{DHBW}{2024}{Mannheim}
+
+	\divider
+
+	\cvTeachInfo{Lecturer: Maths for Biochemistry}{Georg-August-Universität}{2020 -- 2021}{Göttingen}
+
+	\endgroup
+
+\end{paracol}
+
+\end{document}

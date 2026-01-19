@@ -1,0 +1,55 @@
+\usepackage[english,ngerman]{babel}
+
+\ExplSyntaxOn
+
+% the main command
+\NewExpandableDocumentCommand{\lc}{m} % language choice
+{
+	\fabbri_lc:n { #1 }
+}
+% we can change the language mid document
+\NewDocumentCommand{\setlclanguage}{m}
+{
+	\fabbri_lc_set:n { #1 }
+}
+
+% variables
+\str_new:N \l_fabbri_lc_lang_str
+\str_new:N \l_fabbri_lc_fallback_str
+
+% internal functions
+\cs_new:Nn \fabbri_lc:n
+{
+	\str_case:VnF \l_fabbri_lc_lang_str
+	{ #1 }
+	{ \str_case:Vn \l_fabbri_lc_fallback_str { #1 } }
+}
+
+\cs_new_protected:Nn \fabbri_lc_set:n
+{
+	\str_set:Nn \l_fabbri_lc_lang_str { #1 }
+	\fabbri_lc:n
+	{
+		{en}{\selectlanguage{english}}
+			{de}{\selectlanguage{german}}
+	}
+}
+\cs_generate_variant:Nn \fabbri_lc_set:n { e }
+
+
+% setup
+% set the default language based on \jobname of the form <name>-<lang>
+\seq_set_split:NnV \l_tmpa_seq { - } \c_sys_jobname_str
+\fabbri_lc_set:e { \seq_item:Nn \l_tmpa_seq { 2 } }
+
+% set the fallback language
+\str_set:Nn \l_fabbri_lc_fallback_str { en } % choose the fallback language
+
+\ExplSyntaxOff
+
+\newcommand{\multilang}[2]{%
+	\lc{%
+		{en}{#1}%
+			{de}{#2}%
+	}%
+}
