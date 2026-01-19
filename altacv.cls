@@ -221,7 +221,7 @@
 \NewInfoField{homepage}{\faGlobe}[https://]
 \NewInfoField{github}{\faGithub{}}[https://www.github.com/]
 \NewInfoField{twitter}{\faTwitter}[https://twitter.com/]
-\NewInfoField{nationality}{\faFlag \multilang{citizenship}{Staatsangehörigkeit}: }[]
+\NewInfoField{nationality}{\faFlag \multilang{citizenship}{Staatsangehörigkeit}: }
 % v1.7.2 twitter.com is now X.com; v1.7.3 but only use the new icon if it's been defined
 \ifcsdef{simpleicon@xicon}
 {\NewInfoField{xtwitter}{\raisebox{-0.2ex}{\scalebox{0.95}{\simpleicon{x}}}\,}[https://x.com/]}
