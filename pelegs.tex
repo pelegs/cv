@@ -15,7 +15,7 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,withhypeper,normalphoto]{altacv}
 
-\documentclass[10pt,a4paper,withhyper]{altacv}
+\documentclass[10pt, a4paper, withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and simpleicons packages.
 %% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
 
@@ -87,7 +87,7 @@
 
 \begin{document}
 \name{Peleg Sapir}
-\tagline{\multilang{Software Developer}{Softwareentwickler}}
+\tagline{\multilang{Software Developer, Automation Engineer}{Softwareentwickler, Automatisierungsingenieur}}
 % Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
 %% You can add multiple photos on the left or right
 \photoR{3.35cm}{pelegs1}
@@ -97,7 +97,7 @@
 	\phone{\myphonenum}
 	\linkedin{pelegsap}
 	\github{pelegs}
-	\location{Darmstadt}
+	\location{\mycity}
 	\nationality{\multilang{German}{Deutsch}}
 }
 
@@ -113,46 +113,44 @@
 % break across pages if things get too long.
 \begin{paracol}{2}
 	\vspace{1.5em}
-	\cvsection{\multilang{Experience}{Erfahrung}}
+	\cvsection{\multilang{Experience}{Berufserfahrung}}
 
-	\cvevent{\multilang{Software Developer}{Softwareentwickler}}{SureSecure GmbH}{February 2025 -- July 2025}{Düsseldorf, Germany}
-	As a member of the Securiry Operation Center (SOC) I was responsible for developing, maintaining and integrating various components and new features into our workflow, with emphasis on our SIEM and SOAR platforms.\\
-	% \textbf{Note}: the specific details are confidential due to the nature of the cybersecurity environment. Further information will be divulged per request only as allowed by the company.
+	\cvevent{\multilang{Software Developer}{Softwareentwickler}}{SureSecure GmbH}{\multilang{February}{Februar} 2025 -- \multilang{July}{Juli} 2025}{Düsseldorf, \multilang{Germany}{Deutschland}}
+	\multilang{As a member of the Securiry Operation Center (SOC) I was responsible for developing, maintaining and integrating various components and new features into our workflow, with emphasis on our SIEM and SOAR platforms}{Mitglied des Securiry Operation Center (SOC). Ich war für die Entwicklung, Wartung und Integration verschiedener Komponenten und neuer Funktionen in unseren Workflow verantwortlich, mit Schwerpunkt auf unseren SIEM- und SOAR-Plattformen}.\\
 
 	\divider
 
-	\cvevent{Software Developer, Automation Engineer}{exocad GmbH}{November 2020 -- January 2025}{Darmstadt, Germany}
-	I was tasked with designing and implementing automated processes for different teams in the company.
-
-	Examples of successfull projects (\textbf{tools used}):
+	\cvevent{\multilang{Software Developer, Automation Engineer}{Softwareentwickler, Automatisierungsingenieur}}{exocad GmbH}{November 2020 -- \multilang{January}{Januar} 2025}{Darmstadt, \multilang{Germany}{Deutschland}}
+	\multilang{I was tasked with designing and implementing automated processes for different teams in the company. Examples of successfull projects}{Ich wurde mit der Gestaltung und Implementierung automatisierter Prozesse für verschiedene Teams im Unternehmen beauftragt. Beispiele erfolgreicher Projekte} (\emph{\multilang{tools used}{Tools}}):
 
 	\vspace{0.5em}
 
 	\begin{itemize}
-		\item Designed, implemented and deployed a system for extraction of data from 3D models provided by external manufactures. The data is collected into a database which is updated daily and provides simple search and statistics to internal users via SQL queries. This system is used daily by the company's integration team. (\textbf{Python}, \textbf{Sqlite}, \textbf{Bash})
-		\item Created a conversion tool between two ticketing systems: \textit{trac} and \textit{Jira}. I then used the tool to migrate all of the existing tickets, including comments, change histories and all other attributes. (\textbf{Python with REST API}, \textbf{PostgreSQL})
-		\item Wrote script for anonymization of client-generated case files as part of a pipeline for developing machine-learning models. (\textbf{Python}, \textbf{C\#)}
-		\item Created a pipeline for generating official release notes from relevant Jira tickets. (\textbf{Python}, \textbf{Jenkins})
+		\item {\multilang{Designed, implemented and deployed a system for extraction of data from 3D models provided by external manufactures. The data is collected into a database which is updated daily and provides simple search and statistics to internal users via SQL queries. This system is used daily by the company's integration team}{Entwarf, implementierte und verteilte System zur Extraktion von Daten aus 3D-Modellen, die von externen Herstellern bereitgestellt wurden. Die Daten werden in einer Datenbank gesammelt, die täglich aktualisiert wird und internen Benutzern über SQL-Abfragen eine einfache Suche und Statistiken bietet. Dieses System wird täglich vom Integrationsteam des Unternehmens verwendet}. (\emph{Python}, \emph{Sqlite}, \emph{Bash})}
+		\item \multilang{Created a conversion tool between two ticketing systems: \textit{trac} and \textit{Jira}. I then used the tool to migrate all of the existing tickets, including comments, change histories and all other attributes}{Erstellung eines Konvertierungstools zwischen zwei Ticketsystemen: \textit{trac} und \textit{Jira}. Anschließend habe ich mit dem Tool alle vorhandenen Tickets inkl. Kommentare, Änderungshistorien und allen anderen Attributen migriert}. (\emph{Python with REST API}, \emph{PostgreSQL})
+		\item \multilang{Automated the anonymization of client-generated case files as part of a pipeline for developing machine-learning models}{Automatisierte Anonymisierung kundengenerierter Falldateien als Teil einer Pipeline zur Entwicklung von Modellen für maschinelles Lernen}. (\emph{Python}, \emph{C\#)}
+		\item \multilang{Created a pipeline for generating official release notes from relevant Jira tickets}{Erstellte eine Pipeline zum Generieren offizieller Versionshinweise aus relevanten Jira-Tickets
+}. (\emph{Python}, \emph{Jenkins})
 	\end{itemize}
 
-	\vspace{0.5em}
-	I also gave seminars in the company on various topics, such as \textit{linear algebra} and \textit{python}.
+	% \vspace{0.5em}
+	% I also gave seminars in the company on various topics, such as \textit{linear algebra} and \textit{python}.
+	%
+	\divider
+
+	\cvevent{\multilang{Software Developer}{Softwareentwickler}}{\multilang{MPI for Biophysical Chemistry}{MPI f. biophysikalische Chemie}}{2018 -- 2019}{Göttingen, \multilang{Germany}{Deutschland}}
+	\multilang{Developed firmware and software for a locally built automatic worm incubator. Publication}{Entwickelte Firmware und Software für einen automatischen Wurm-Inkubator (vor Ort gebauten). Veröffentlichung
+}: \href{https://www.tandfonline.com/doi/full/10.1080/01677063.2020.1776709}{DOI: 10.1080/01677063.2020.1776709}.
 
 	\divider
 
-	\cvevent{Software Developer}{MPI for Biophysical Chemistry}{2018 --  2019}{Göttingen, Germany}
-	Developed firmware and software for a locally built automatic worm incubator. Publication: \href{https://www.tandfonline.com/doi/full/10.1080/01677063.2020.1776709}{DOI: 10.1080/01677063.2020.1776709}.
+	\cvevent{\multilang{Student Assistant (HiWi)}{HiWi}}{ZEDAT, Freie Universität Berlin}{2017}{Berlin, \multilang{Germany}{Deutschland}}
+	\multilang{Was a member of the HPC cluster group. As part of the team I wrote scripts for cluster and user management}{War Mitglied der HPC-Clustergruppe. Als Teil des Teams habe ich Skripte für die Cluster- und Benutzerverwaltung geschrieben}.
 
 	\divider
 
-	\cvevent{Student Assistant (HiWi)}{ZEDAT, Freie Universität Berlin}{2017}{Berlin, Germany}
-	Was a member of the HPC cluster group. As part of the team I wrote scripts for different management purposes.
-
-	\divider
-
-	\cvevent{Software Developer, Research Assistant}{MPI for Dynamics and Self-Organization, Göttingen}{2014 -- 2016}{Göttingen, Germany}
-	Developed software to track collectives of bacteria from videos.
-
+	\cvevent{\multilang{Software Developer, Research Assistant}{Softwareentwickler, wiss. MA}}{\multilang{MPI for Dynamics and Self-Organization}{MPI f. Dynamik und Selbstorganisation}, Göttingen}{2014 -- 2016}{Göttingen, \multilang{Germany}{Deutschland}}
+	\multilang{Developed software to track collectives of bacteria from videos}{Entwickelte Software zur Verfolgung von Bakterienkollektiven anhand von Videos}.
 
 	%\cvsection{A Day of My Life}
 
@@ -178,29 +176,26 @@
 
 	\vspace{1.5em}
 
-	\cvsection{Summary}
-	Software developer with \textbf{over 10 years} of professional experience.
+	\cvsection{\multilang{Summary}{Zusammenfassung}}
+	\multilang{Software developer and automation engineer with over 10 years of professional experience}{Softwareentwickler und Automatisierungsingenieur mit über 10 Jahren Berufserfahrung}.
 
-	\cvsection{Main Tools}
+	\cvsection{\multilang{Main Tools}{Tools}}
 
-	\cvachievement{\faPython}{Python}{Been working with python almost daily for \textbf{over 10 years}, it is my main go-to langauge for fast prototyping and scripting}
-
-	\divider
-
-	\cvachievement{\faLinux}{Linux}{Avid Linux user for \textbf{over 20 years} and fully fluent in any Linux environment}
+	\cvachievement{\faPython}{Python}{\multilang{Been working with python almost daily for \emph{over 10 years}, it is my main go-to langauge for fast prototyping and scripting}{Ich arbeite seit über 10 Jahren fast täglich mit Python als meine Hauptsprache für schnelles Prototyping und Scripting}}
 
 	\divider
 
-	\cvachievement{\faGit*}{Git}{Many years of experience working with git, including \textbf{GitLab CI/CD} for deployment \& integration}
+	\cvachievement{\faLinux}{Linux}{\multilang{Avid Linux user for \emph{over 20 years} and fully fluent in any Linux environment}{Begeisterter Linux-Nutzer seit \emph{über 20 Jahren} und beherrscht jede Linux-Umgebung vollkommen fließend}}
 
 	\divider
 
-	\cvachievement{\faDocker}{Docker}{Experienced in setting up containers}
+	\cvachievement{\faGit*}{Git}{\multilang{Daily work with git, including \emph{GitLab CI/CD} for deployment \& integration}{Tägliche Arbeit mit Git, inkl. \emph{Gitlab CI/CD} für Verteilung und Integration}}
 
-	\cvsection{Other Tools}
+	\divider
 
-	% Don't overuse these \cvtag boxes — they're just eye-candies and not essential. If something doesn't fit on a single line, it probably works better as part of an itemized list (probably inlined itemized list), or just as a comma-separated list of strengths.
+	\cvachievement{\faDocker}{Docker}{\multilang{Experienced in setting up and maintaining containers}{Erfahrung im Aufstellen und Warten von Containern}}
 
+	\cvsection{\multilang{Other Tools}{Weitere Tools}}
 	\cvtag{Golang}
 	\cvtag{C/C++}\\
 	\cvtag{Bash}
@@ -212,37 +207,37 @@
 	\cvtag{\LaTeX\tikzmark{ltx}}
 	\begin{tikzpicture}[remember picture, overlay]
 		\fontsize{6}{6}\selectfont{}
-		\draw[stealth-] ($(pic cs:ltx) + (7pt,2.5pt)$) to [out=0, in=180] ++(25pt,-10pt) node [right, text width=1.15cm] {what I used to typeset the cv \faIcon[regular]{smile-beam}};
+		\draw[stealth-] ($(pic cs:ltx) + (7pt,2.5pt)$) to [out=0, in=180] ++(25pt,-10pt) node [right, text width=1.15cm] {\multilang{what I used to typeset the cv}{Der CV wurde damit gesetzt} \faIcon[regular]{smile-beam}};
 	\end{tikzpicture}
 
 	% \divider\smallskip
 
-	\cvsection{Languages}
+	\cvsection{\multilang{Languages}{Sprache}}
 	\vspace{0.25em}
 	\begingroup
 	\setlength{\parskip}{-0.5em}
-	\langskill{English}{Fully fluent in speech and writing}
-	\langskill{German}{Fluent in daily conversations}
-	\langskill{Hebrew}{Native speaker}
+	\langskill{\multilang{English}{Englisch}}{C2}
+	\langskill{\multilang{German}{Deutsch}}{C1}
+	\langskill{\multilang{Hebrew}{Hebräisch}}{\multilang{Native speaker}{Muttersprache}}
 	\endgroup
 
 	\cvsection{Academia}
 	\begingroup
 	\setlength{\parskip}{-0.2em}
 
-	\cvGradInfo{M.Sc. Chemistry}{Freie Universität Berlin}{2019}{Berlin/Göttingen}
+	\cvGradInfo{M.Sc. \multilang{Chemistry}{Chemie}}{Freie Universität Berlin}{2019}{Berlin/Göttingen}
 
 	\divider
 
-	\cvGradInfo{B.Sc. Chemistry}{Tel Aviv university}{2012}{Tel Aviv-Jaffa}
+	\cvGradInfo{B.Sc. \multilang{Chemistry}{Chemie}}{Tel Aviv university}{2012}{Tel Aviv-Jaffa}
 
 	\divider
 
-	\cvTeachInfo{Lecturer: Physics Simulations}{DHBW}{2024}{Mannheim}
+	\cvTeachInfo{\multilang{Lecturer: Physics Simulations}{Dozent: Physiksimulationen}}{DHBW}{2024}{Mannheim}
 
 	\divider
 
-	\cvTeachInfo{Lecturer: Maths for Biochemistry}{Georg-August-Universität}{2020 -- 2021}{Göttingen}
+	\cvTeachInfo{\multilang{Lecturer: Maths for Biochemistry}{Dozent: Mathematik für Biochemie}}{Georg-August-Universität}{2020 -- 2021}{Göttingen}
 
 	\endgroup
 

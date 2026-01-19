@@ -75,11 +75,12 @@
 }{}
 \iftutex
 	\RequirePackage{fontspec}
+	\setmainfont{Lato}
 \else
 	%% v1.3.2 attempts to make ligatures
 	%% copy-paste as normal characters
 	\RequirePackage{cmap}
-	\RequirePackage[utf8]{inputenc}
+	% \RequirePackage[utf8]{inputenc}
 	% \RequirePackage[T1]{fontenc}
 	\input{glyphtounicode}
 	\pdfglyphtounicode{f_f}{FB00}
@@ -88,7 +89,6 @@
 	\pdfglyphtounicode{f_i}{FB01}
 	\pdfgentounicode=1
 \fi
-\setmainfont[Path = /usr/share/fonts/TTF/]{Lato-Medium}
 
 \if@raggedtwoe
 	\RequirePackage[newcommands]{ragged2e}
@@ -408,7 +408,7 @@
 }
 
 \newcommand{\langskill}[2]{%
-	\textcolor{emphasis}{\textbf{#1}}\hfill\quad\textcolor{black!75}{#2}
+	\textcolor{emphasis}{\textbf{#1}}\hfill\ \textcolor{black!75}{#2}\\
 }
 
 % Adapted from @Jake's answer at http://tex.stackexchange.com/a/82729/226
@@ -540,3 +540,5 @@
 		\raggedright%
 	}
 }
+
+\renewcommand{\emph}[1]{\textbf{\textcolor{xblue}{#1}}}
