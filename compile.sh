@@ -1,3 +1,5 @@
+# Yes, this sh "script" is rather silly... but it does what it should so ¯\_(ツ)_/¯
+
 COMPILER="lualatex"
 TEXFILE="pelegs"
 OUTPUT="pdf"
