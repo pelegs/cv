@@ -181,7 +181,7 @@
 
 	\cvsection{\multilang{Main Tools}{Tools}}
 
-	\cvachievement{\faPython}{Python}{\multilang{Been working with python almost daily for \emph{over 10 years}, it is my main go-to langauge for fast prototyping and scripting}{Ich arbeite seit über 10 Jahren fast täglich mit Python als meine Hauptsprache für schnelles Prototyping und Scripting}}
+	\cvachievement{\faPython}{Python}{\multilang{Been working with python almost daily for \emph{over 10 years}, it is my main go-to langauge for fast prototyping and scripting}{Ich arbeite seit über 10 Jahren fast täglich mit Python als meine go-to sprache}}
 
 	\divider
 
@@ -197,18 +197,21 @@
 
 	\cvsection{\multilang{Other Tools}{Weitere Tools}}
 	\cvtag{Golang}
-	\cvtag{C/C++}\\
+	\cvtag{C/C++}
 	\cvtag{Bash}
 	\cvtag{SQL}
 	\cvtag{Jenkins}
 	\cvtag{AWS}
-	\cvtag{BitBucket}
+	% \cvtag{BitBucket}
 	\cvtag{NeoVim}
 	\cvtag{\LaTeX\tikzmark{ltx}}
-	\begin{tikzpicture}[remember picture, overlay]
-		\fontsize{6}{6}\selectfont{}
-		\draw[stealth-] ($(pic cs:ltx) + (7pt,2.5pt)$) to [out=0, in=180] ++(25pt,-10pt) node [right, text width=1.15cm] {\multilang{what I used to typeset the cv}{Der CV wurde damit gesetzt} \faIcon[regular]{smile-beam}};
-	\end{tikzpicture}
+	{
+		\hypersetup{hidelinks}
+		\begin{tikzpicture}[remember picture, overlay]
+			\fontsize{6}{6}\selectfont{}
+			\draw[stealth-] ($(pic cs:ltx) + (-6pt,2.5pt)$) to [out=0, in=180] ++(15pt,-10pt) node [right, text width=1.15cm] {\href{https://github.com/pelegs/cv}{\multilang{what I used to typeset the cv}{CV wurde damit gesetzt}} \faIcon[regular]{smile-beam}};
+		\end{tikzpicture}
+	}
 
 	% \divider\smallskip
 
@@ -216,9 +219,10 @@
 	\vspace{0.25em}
 	\begingroup
 	\setlength{\parskip}{-0.5em}
-	\langskill{\multilang{English}{Englisch}}{C2}
-	\langskill{\multilang{German}{Deutsch}}{C1}
-	\langskill{\multilang{Hebrew}{Hebräisch}}{\multilang{Native speaker}{Muttersprache}}
+	% \langskill{\multilang{English}{Englisch}}{C2}
+	% \langskill{\multilang{German}{Deutsch}}{C1}
+	% \langskill{\multilang{Hebrew}{Hebräisch}}{\multilang{Native speaker}{Muttersprache}}
+	\emph{\multilang{English}{Englisch}} (C2),\ \emph{\multilang{German}{Deutsch}} (C1),\ \emph{\multilang{Hebrew}{Hebräisch}}.
 	\endgroup
 
 	\cvsection{Academia}
