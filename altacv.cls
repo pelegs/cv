@@ -542,3 +542,5 @@
 }
 
 \renewcommand{\emph}[1]{\textbf{\textcolor{xblue}{#1}}}
+
+\newcommand{\inlinecode}[1]{\texttt{#1}}
