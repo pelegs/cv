@@ -2,6 +2,7 @@
 secrets.tex
 *.png
 *.xmpi
+comments/
 
 # Core latex auxiliary files:
 *.aux

@@ -52,7 +52,8 @@
 	\let\\\space
 }
 \RequirePackage{xparse}
-\RequirePackage[margin=2cm]{geometry}
+\RequirePackage{xifthen}
+\RequirePackage[margin=2cm, heightrounded=true]{geometry}
 \RequirePackage[fixed]{fontawesome5}%[2020-01-15]
 
 % 1.7.3 For backward compatibility
@@ -110,7 +111,7 @@
 \colorlet{body}{black!80!white}
 \colorlet{name}{heading}
 \colorlet{tagline}{accent}
-% Renamed or added v1.7
+% Renamed orProfessional  added v1.7
 \newcommand{\cvItemMarker}{{\small\textbullet}}
 \newcommand{\cvRatingMarker}{\faCircle}
 \let\itemmarker\cvItemMarker      % for backward compatibility
@@ -541,6 +542,16 @@
 	}
 }
 
+%% For emphasis of certain terms (e.g. tools used in a project)
 \renewcommand{\emph}[1]{\textbf{\textcolor{xblue}{#1}}}
 
+%% For nicely typesetting inline code and/or computer-related terms (e.g. 'xml')
 \newcommand{\inlinecode}[1]{\texttt{#1}}
+
+%% For typesetting language level
+% \NewDocumentCommand\langlvl{m m O{}}{%
+% 	\multilang{#1}{#2}\IfBlankTF{#3}{}{(#3)}%
+% }
+\newcommand{\langlvl}[3][]{%
+	\textbf{\multilang{#2}{#3}}\ifthenelse{\isempty{#1}}{}{\ (\emph{#1})}%
+}
